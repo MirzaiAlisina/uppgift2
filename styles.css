@@ -1,54 +1,104 @@
+/* Body och bakgrund */
 body {
-  background-image: url(images/background.jpg);
+  background-image: url(images/background.jpg); /* Lägger till bakgrundsbild */
   font-family: Arial, sans-serif;
   line-height: 1.6;
   margin: 0;
   padding: 0;
   background-color: black;
   color: white;
-  padding-bottom: 100px;
+  padding-bottom: 100px; /* Extra utrymme för att undvika överlappning med footern */
 }
+
+/* Header stil */
 header {
-  background-color:gold;
-  color:black;
+  background-color: gold;
+  color: black;
   padding: 10px 0;
   text-align: center;
 }
 
-footer {
-  background-color:gold;
-  color:black;
-  text-align: center;
-  padding: 10px 0;
-  position: fixed;
-  width: 100%;
-  bottom: 0;
-  padding: 20px;
-  border : 3px solid gainsboro;
-
+/* Meny stil */
+nav ul.menu {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+  display: flex;
+  justify-content: center; /* Centrerar menyn */
 }
 
-.container {
+nav ul.menu li {
+  margin: 0 15px;
+}
+
+nav ul.menu li a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul.menu li a:hover {
+  background-color: black;
+  color: gold;
+}
+
+.post-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 80px;
+  margin: 20px;
 }
-.question {
+
+.post {
+  display: flex;
   background-color: gold;
   color: black;
-  text-decoration: none;
-  padding: 10px;
-  margin: 25px;
-  width: 600px;
-  text-align: center;
-  border-radius: 20px;
-  cursor: pointer;
+  border-radius: 8px;
+  margin: 15px 0;
+  padding: 20px;
+  width: 65%;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease;
 }
-.question:hover {
-  background-color:darkgrey;
+
+.post img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-right: 20px;
+  border-radius: 8px;
 }
+
+.post-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.post h3 {
+  margin: 0 0 10px 0;
+}
+
+.post p {
+  margin: 0;
+}
+
+/* Footer stil */
+footer {
+  background-color: gold;
+  color: black;
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  border: 3px solid gainsboro;
+}
+
 
 a{
   text-decoration: none;
@@ -61,25 +111,56 @@ p {
 
 
 @media only screen and (max-width: 431px) {
-  body {
-    background-size: cover;
+  .post-container {
+    margin: 10px; /* Minska marginalerna */
   }
 
-  .container {
-    padding-top: 60px;
+  .post {
+    flex-direction: column; /* Ändra till kolumnlayout */
+    width: 90%; /* Gör postens bredd mer responsiv */
+    padding: 15px; /* Minska padding för mindre skärmar */
   }
 
-  .question {
-    width: 90%; /* Justera bredden för att passa mindre skärmar */
-    font-size: 16px; /* Mindre textstorlek på mobil */
-    margin: 15px; /* Mindre marginaler */
-  }
-
-  footer {
-    padding: 15px; /* Mindre padding i footer */
-    font-size: 14px; /* Mindre textstorlek */
+  .post img {
     width: 100%;
+    height: auto; /* Bevara bildens proportioner */
+    margin-right: 0; /* Ta bort höger marginal */
+    margin-bottom: 10px; /* Lägga till marginal under bilden */
   }
-  
+
+  .post-text h3 {
+    font-size: 1.2em; /* Minska storleken på rubriken */
+  }
+
+  .post-text p {
+    font-size: 0.9em; /* Minska storleken på brödtexten */
+  }
+
+  nav ul.menu {
+    flex-direction: column; /* Gör menyn vertikal */
+    align-items: stretch; /* Fyller hela bredden */
+    padding: 0;
+    margin: 0;
+  }
+
+  nav ul.menu li {
+    width: 100%;
+    margin: 5px 0; /* Lägger till marginal mellan menyalternativ */
+  }
+
+  nav ul.menu li a {
+    display: block; /* Gör länkarna block för att fylla hela menyposten */
+    text-align: center;
+    padding: 5px; /* Öka padding för bättre klickytor */
+    background-color: white;
+    color: black; /* Textfärg */
+    border-radius: 20px;
+  }
+
+  nav ul.menu li a:hover {
+    background-color: black;
+    color: gold;
+  }
 }
+
 

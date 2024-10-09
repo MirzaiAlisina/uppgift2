@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="sv">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,17 +11,35 @@
   <body>
 
     <header>
-    <a href="index.html"> <h2> Välkommen till kursen HTLM och CSS</h2> </a>
+      <h2>Layout</h2>
+      <nav>
+          <ul class="menu">
+              <li><a href="index.html"> Hem</a></li>
+              <li><a href="f4.html">F4: Layout</a></li>
+              <li><a href="f5.html">F5: Navigering</a></li>
+              <li><a href="f6.html">F6: Målgruppsanalys och kravspecifikation</a></li>
+          </ul>
+      </nav>
   </header>
 
+  <div class="post-container">
 
-  <div class="container">
-    <div class="question">
-        <p> <h4>1: Förklara vad CSS-egenskaperna justify-content respektive align-items har för effekt när man använder flexbox för layout?</h4>När du använder flex-boxar kan du välja placera dem på två sätt antigen horisontellt eller vertikalt. När du placerar dem horisontellt använder du dig av justify-content och när du placerar dem vertikalt använder de dig av align-items </p>
+    <div class="post">
+        <img src="images/kodbild1.jpg" alt="Bild 1">
+        <div class="post-text">
+            <h3>1: Förklara vad CSS-egenskaperna justify-content respektive align-items har för effekt när man använder flexbox för layout?</h3>
+            <p>När du använder flex-boxar kan du välja placera dem på två sätt antigen horisontellt eller vertikalt. När du placerar dem horisontellt använder du dig av justify-content och när du placerar dem vertikalt använder de dig av align-items</p>
+        </div>
     </div>
-    <div class="question">
-        <p> <h4>2: Vad är en media query och vad används den till? </h4>Det är en teknik som används för att anpassa webbsidan till olika skärmar. Syftet är att skapa reponsiva webbplatser och teknik gör att designen ändras dynamiskt beroede på vilken typ av skärm eller enhet användaren har. </p>
+
+    <div class="post">
+        <img src="images/kodbild2.jpg" alt="Bild 2">
+        <div class="post-text">
+            <h3> Vad är en media query och vad används den till?</h3>
+            <p>Det är en teknik som används för att anpassa webbsidan till olika skärmar. Syftet är att skapa reponsiva webbplatser och teknik gör att designen ändras dynamiskt beroede på vilken typ av skärm eller enhet användaren har.</p>
+        </div>
     </div>
+
 </div>
 
 
