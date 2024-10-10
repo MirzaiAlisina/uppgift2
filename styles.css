@@ -110,7 +110,36 @@ p {
 }
 
 
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Två lika breda kolumner */
+  gap: 20px; /* Mellanrum mellan boxarna */
+  padding: 20px;
+  max-width: 1000px; /* Maxbredd för att matcha header och meny */
+  margin: 0 auto; /* Centrerar grid-container */
+}
+
+/* Box-stil */
+.box {
+  background-color: gold;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.2em;
+  border-radius: 8px;
+}
+
+/* Gör bilder responsiva och matcha boxbredd */
+.box img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+
+
 @media only screen and (max-width: 431px) {
+
   .post-container {
     margin: 10px; /* Minska marginalerna */
   }
@@ -161,6 +190,19 @@ p {
     background-color: black;
     color: gold;
   }
+
+  .grid-container {
+    grid-template-columns: 1fr; /* Ändrar till en kolumnlayout */
+}
+
+.grid-container {
+  grid-template-columns: 1fr; /* Ändrar till en kolumnlayout */
+  padding: 10px; /* Minskar padding på mindre skärmar */
+}
+
+.box {
+  width: 90%; /* Gör boxarna lika breda som skärmens innehåll */
+}
 }
 
 
