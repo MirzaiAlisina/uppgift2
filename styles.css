@@ -1,4 +1,3 @@
-/* Body och bakgrund */
 body {
   background-image: url(images/background.jpg); /* Lägger till bakgrundsbild */
   font-family: Arial, sans-serif;
@@ -10,7 +9,7 @@ body {
   padding-bottom: 100px; /* Extra utrymme för att undvika överlappning med footern */
 }
 
-/* Header stil */
+
 header {
   background-color: gold;
   color: black;
@@ -18,7 +17,7 @@ header {
   text-align: center;
 }
 
-/* Meny stil */
+
 nav ul.menu {
   list-style: none;
   padding: 0;
@@ -99,18 +98,17 @@ footer {
   border: 3px solid gainsboro;
 }
 
-
-a{
+a {
   text-decoration: none;
   color: black;
 }
+
 p {
   margin: 0;
   font-size: 18px;
 }
 
-
-
+/* Grid-container för boxar */
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr; /* Två lika breda kolumner */
@@ -136,73 +134,76 @@ p {
   border-radius: 8px;
 }
 
-
-
-@media only screen and (max-width: 431px) {
-
-  .post-container {
-    margin: 10px; /* Minska marginalerna */
+/* Responsiv layout för skärmar med maxbredd på 1025px */
+@media only screen and (max-width: 1025px) {
+  .grid-container {
+      grid-template-columns: 1fr; /* Ändrar till en kolumnlayout */
   }
 
   .post {
-    flex-direction: column; /* Ändra till kolumnlayout */
-    width: 90%; /* Gör postens bredd mer responsiv */
-    padding: 15px; /* Minska padding för mindre skärmar */
+      width: 90%; /* Justera bredden på inläggen */
+  }
+}
+
+/* Responsiv layout för skärmar med maxbredd på 431px */
+@media only screen and (max-width: 431px) {
+  .post-container {
+      margin: 10px; /* Minska marginalerna */
+  }
+
+  .post {
+      flex-direction: column; /* Ändra till kolumnlayout */
+      width: 90%; /* Gör postens bredd mer responsiv */
+      padding: 15px; /* Minska padding för mindre skärmar */
   }
 
   .post img {
-    width: 100%;
-    height: auto; /* Bevara bildens proportioner */
-    margin-right: 0; /* Ta bort höger marginal */
-    margin-bottom: 10px; /* Lägga till marginal under bilden */
+      width: 100%;
+      height: auto; /* Bevara bildens proportioner */
+      margin-right: 0; /* Ta bort höger marginal */
+      margin-bottom: 10px; /* Lägga till marginal under bilden */
   }
 
   .post-text h3 {
-    font-size: 1.2em; /* Minska storleken på rubriken */
+      font-size: 1.2em; /* Minska storleken på rubriken */
   }
 
   .post-text p {
-    font-size: 0.9em; /* Minska storleken på brödtexten */
+      font-size: 0.9em; /* Minska storleken på brödtexten */
   }
 
   nav ul.menu {
-    flex-direction: column; /* Gör menyn vertikal */
-    align-items: stretch; /* Fyller hela bredden */
-    padding: 0;
-    margin: 0;
+      flex-direction: column; /* Gör menyn vertikal */
+      align-items: stretch; /* Fyller hela bredden */
+      padding: 0;
+      margin: 0;
   }
 
   nav ul.menu li {
-    width: 100%;
-    margin: 5px 0; /* Lägger till marginal mellan menyalternativ */
+      width: 100%;
+      margin: 5px 0; /* Lägger till marginal mellan menyalternativ */
   }
 
   nav ul.menu li a {
-    display: block; /* Gör länkarna block för att fylla hela menyposten */
-    text-align: center;
-    padding: 5px; /* Öka padding för bättre klickytor */
-    background-color: white;
-    color: black; /* Textfärg */
-    border-radius: 20px;
+      display: block; /* Gör länkarna block för att fylla hela menyposten */
+      text-align: center;
+      padding: 5px; /* Öka padding för bättre klickytor */
+      background-color: white;
+      color: black; /* Textfärg */
+      border-radius: 20px;
   }
 
   nav ul.menu li a:hover {
-    background-color: black;
-    color: gold;
+      background-color: black;
+      color: gold;
   }
 
   .grid-container {
-    grid-template-columns: 1fr; /* Ändrar till en kolumnlayout */
-}
+      grid-template-columns: 1fr; /* Ändrar till en kolumnlayout */
+      padding: 10px; /* Minskar padding på mindre skärmar */
+  }
 
-.grid-container {
-  grid-template-columns: 1fr; /* Ändrar till en kolumnlayout */
-  padding: 10px; /* Minskar padding på mindre skärmar */
+  .box {
+      width: 90%; /* Gör boxarna lika breda som skärmens innehåll */
+  }
 }
-
-.box {
-  width: 90%; /* Gör boxarna lika breda som skärmens innehåll */
-}
-}
-
-
